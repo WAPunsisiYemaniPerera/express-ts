@@ -1,18 +1,12 @@
-import express, { Application } from 'express';
-import greetingRoute from './routes/greeting.route';  // import your router
+import express, { Application } from "express";
+import { Routes } from "./routes/routes";
 
-const app: Application = express();
+const app:Application = express();
 
 app.use(express.json());
-
-// use the imported router directly
-app.use("/greeting", greetingRoute);
-
-app.get("/", (req, res) => {
-    res.send("Hello World");
-});
+app.use("/api" ,Routes.getInstance().router)
 
 const PORT = 3000;
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
