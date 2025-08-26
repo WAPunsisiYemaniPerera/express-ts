@@ -7,7 +7,7 @@ export const successResponse = (code:HttpStatus, response:Response, data:any, al
     response.status(code).json(responseData);
 }
 
-export const errorResponse = (code:HttpStatus, response:Response, error:IError, exactError?:any) => {
+export const errorResponse = (code:HttpStatus, response:Response, error:IError) => {
     const errorContent = {
         code,
         key: error.key,
