@@ -59,8 +59,8 @@ npm install
 Edit `.env` with your settings:
 ```env
 PORT=5000
-PASSWORD=hello
-MONGODB_URL=mongodb+srv://<username>:<password>@cluster0.mongodb.net/?retryWrites=true&w=majority
+PASSWORD=blabla
+MONGODB_URL=db_url
 ```
 
 ### 4. Run the app (development)
